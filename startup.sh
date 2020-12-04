@@ -18,7 +18,8 @@ else
 fi
 
 npm run prod
-chown -R www-data:www-data storage 
+chown -R 1000:www-data storage
+chmod -R g=u storage
 php artisan storage:link
 cd /etc/supervisor/conf.d/
 
