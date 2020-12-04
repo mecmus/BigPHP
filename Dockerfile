@@ -43,8 +43,8 @@ WORKDIR /usr/src
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-COPY BigPHP/supervisord.conf /etc/supervisor/supervisord.conf
-COPY BigPHP/startup.sh /
+COPY supervisord.conf /etc/supervisor/supervisord.conf
+COPY startup.sh /
 
 #ENTRYPOINT ["/usr/bin/supervisord", "-n", "-c",  "/etc/supervisord.conf"]
 CMD ["/startup.sh"]
