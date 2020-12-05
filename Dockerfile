@@ -34,6 +34,9 @@ RUN docker-php-ext-install gd
  
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
+
+COPY laravel-echo-server/package.json /usr/src/app/
+
 RUN npm install
 
 
