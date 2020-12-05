@@ -23,11 +23,18 @@ RUN apk --update add wget \
   supervisor \
   libjpeg-turbo-dev \
   libpng-dev \
-  freetype-dev
+  freetype-dev \
+  python \
+  python-dev \
+  py-pip 
 
 RUN docker-php-ext-install mysqli mbstring pdo pdo_mysql tokenizer xml pcntl exif
 RUN docker-php-ext-configure gd --with-gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ --with-png-dir=/usr/include/
 RUN docker-php-ext-install gd
+ 
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+RUN npm install
 
 
 # Add a non-root user:
@@ -56,4 +63,4 @@ RUN rm /var/cache/apk/* \
 
 WORKDIR /etc/supervisor/conf.d/
 
-EXPOSE 80 9000
+EXPOSE 80 6001 9000
