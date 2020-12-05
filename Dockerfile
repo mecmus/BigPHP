@@ -24,8 +24,8 @@ RUN apk --update add wget \
   libjpeg-turbo-dev \
   libpng-dev \
   freetype-dev \
-  python \
-  python-dev \
+  python2 \
+  python2-dev \
   py-pip 
 
 RUN docker-php-ext-install mysqli mbstring pdo pdo_mysql tokenizer xml pcntl exif
