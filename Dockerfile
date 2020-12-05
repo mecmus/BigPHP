@@ -66,4 +66,4 @@ RUN rm /var/cache/apk/* \
 
 WORKDIR /etc/supervisor/conf.d/
 
-EXPOSE 80 6001 9000
+EXPOSE 80 81 9000
