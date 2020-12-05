@@ -43,7 +43,7 @@ WORKDIR /usr/src
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-COPY supervisor/ /etc/
+COPY supervisor/ /etc/supervisor
 COPY startup.sh /
 RUN chmod +x /startup.sh
 
