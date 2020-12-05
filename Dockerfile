@@ -45,6 +45,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 COPY supervisord.conf /etc/supervisor/supervisord.conf
 COPY startup.sh /
+RUN chmod +x /startup.sh
 
 #ENTRYPOINT ["/usr/bin/supervisord", "-n", "-c",  "/etc/supervisord.conf"]
 CMD ["/startup.sh"]
