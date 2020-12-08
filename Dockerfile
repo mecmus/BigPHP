@@ -26,7 +26,8 @@ RUN apk --update add wget \
   freetype-dev \
   python2 \
   python2-dev \
-  py-pip 
+  py-pip \
+  mysql-client
 
 RUN docker-php-ext-install mysqli mbstring pdo pdo_mysql tokenizer xml pcntl exif
 RUN docker-php-ext-configure gd --with-gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ --with-png-dir=/usr/include/
