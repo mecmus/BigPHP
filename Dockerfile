@@ -36,7 +36,7 @@ RUN docker-php-ext-configure gd --with-gd --with-freetype-dir=/usr/include/ --wi
 RUN docker-php-ext-install gd
 RUN docker-php-ext-configure zip --with-zlib-dir=/usr && docker-php-ext-install zip
  
-RUN mkdir -p /usr/src/app
+RUN mkdir -p /usr/src/app /var/www
 WORKDIR /usr/src/app
 
 COPY laravel-echo-server/package.json /usr/src/app/
@@ -63,10 +63,6 @@ RUN chmod +x /startup.sh
 
 #ENTRYPOINT ["/usr/bin/supervisord", "-n", "-c",  "/etc/supervisord.conf"]
 CMD ["/startup.sh"]
-
-# Clean up
-RUN rm /var/cache/apk/* \
-    && mkdir -p /var/www
 
 WORKDIR /etc/supervisor/conf.d/
 
