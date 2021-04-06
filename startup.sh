@@ -17,10 +17,8 @@ else
         su -c 'npm i' phpapps
 fi
 
-npm run prod
-chown -R 1000:www-data storage
-chmod -R g=u storage
-php artisan storage:link
-cd /etc/supervisor/conf.d/
+su -c 'nnpm run prod' phpapps
+su -c 'php artisan storage:link' phpapps
+cd /var/www
 
 /usr/bin/supervisord -n -c /etc/supervisor/supervisord.conf
