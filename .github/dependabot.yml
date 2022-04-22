@@ -11,4 +11,4 @@ updates:
       interval: "daily"
     ignore:
       - dependency-name: "*"
-        versions: ["8.x"]
+        update-types: ["version-update:semver-major"]
