@@ -32,7 +32,7 @@ RUN apk --update --no-cache add wget \
   restic
 
 RUN docker-php-ext-install mysqli mbstring pdo pdo_mysql pcntl exif
-RUN if [ $(php -v | grep 7.4 | wc -l) != 0 ] ; then docker-php-ext-configure gd --enable-gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/; else docker-php-ext-configure gd --with-gd-dir=/usr/include/ --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/; fi
+RUN if [ $(php -v | grep 7.4\|8. | wc -l) != 0 ] ; then docker-php-ext-configure gd --enable-gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/; else docker-php-ext-configure gd --with-gd-dir=/usr/include/ --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/; fi
 RUN docker-php-ext-install gd
 RUN docker-php-ext-install zip
 
