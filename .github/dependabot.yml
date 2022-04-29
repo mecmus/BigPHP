@@ -12,7 +12,7 @@ updates:
     target-branch: "7.3.x"
     ignore:
       - dependency-name: "php"
-        update-types: ["version-update:semver-minor"]
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]
   - package-ecosystem: "docker" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
@@ -20,7 +20,7 @@ updates:
     target-branch: "7.4.x"
     ignore:
       - dependency-name: "php"
-        update-types: ["version-update:semver-minor"]
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]
   - package-ecosystem: "docker" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
@@ -28,7 +28,7 @@ updates:
     target-branch: "8.0.x"
     ignore:
       - dependency-name: "php"
-        update-types: ["version-update:semver-minor"]
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]
   - package-ecosystem: "docker" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
@@ -36,5 +36,5 @@ updates:
     target-branch: "8.1.x"
     ignore:
       - dependency-name: "php"
-        update-types: ["version-update:semver-minor"]
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]
 
