@@ -9,10 +9,16 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
-#    ignore:
-#      - dependency-name: "php"
-#        update-types: ["version-update:semver-major"]
-  - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/laravel-echo-server/" # Location of package manifests
+    target-branch: "7.x"
+    ignore:
+      - dependency-name: "php"
+        update-types: ["version-update:semver-major"]
+  - package-ecosystem: "docker" # See documentation for possible values
+    directory: "/" # Location of package manifests
     schedule:
-      interval: "daily" 
+      interval: "daily"
+    target-branch: "8.x"
+    ignore:
+      - dependency-name: "php"
+        update-types: ["version-update:semver-major"]
+
