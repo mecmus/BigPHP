@@ -26,6 +26,8 @@ jobs:
         with:
           images: mecmus/bigphp
           tags: |
+            # set latest tag latest only for latest branch major version
+            type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', '8.1.x') }}
             type=ref,event=branch
             type=ref,event=pr
             type=semver,pattern={{version}}
