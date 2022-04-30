@@ -32,10 +32,10 @@ RUN apk --update --no-cache add wget \
   restic
 
 RUN docker-php-ext-install mysqli mbstring pdo pdo_mysql pcntl exif
-RUN docker-php-ext-configure gd --enable-gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ --with-png=/usr/include/
+RUN docker-php-ext-configure gd --enable-gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/
 RUN docker-php-ext-install gd
 RUN docker-php-ext-install zip
- 
+
 RUN mkdir -p /usr/src/app /var/www
 WORKDIR /usr/src/app
 

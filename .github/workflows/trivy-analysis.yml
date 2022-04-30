@@ -2,10 +2,18 @@ name: Trivy sec analysis
 
 on:
   push:
-    branches: [ main ]
+    branches: 
+      - "7.3.x"
+      - "7.4.x"
+      - "8.0.x"
+      - "8.1.x"
   pull_request:
     # The branches below must be a subset of the branches above
-    branches: [ main ]
+    branches: 
+      - "7.3.x"
+      - "7.4.x"
+      - "8.0.x"
+      - "8.1.x"
   schedule:
     - cron: '34 10 * * 3'
 
