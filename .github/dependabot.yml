@@ -13,6 +13,8 @@ updates:
     ignore:
       - dependency-name: "php"
         update-types: ["version-update:semver-major", "version-update:semver-minor"]
+      - dependency-name: "node"
+        update-types: ["version-update:semver-major"]        
   - package-ecosystem: "docker" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
@@ -21,6 +23,8 @@ updates:
     ignore:
       - dependency-name: "php"
         update-types: ["version-update:semver-major", "version-update:semver-minor"]
+      - dependency-name: "node"
+        update-types: ["version-update:semver-major"]          
   - package-ecosystem: "docker" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
@@ -29,6 +33,8 @@ updates:
     ignore:
       - dependency-name: "php"
         update-types: ["version-update:semver-major", "version-update:semver-minor"]
+      - dependency-name: "node"
+        update-types: ["version-update:semver-major"]          
   - package-ecosystem: "docker" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
@@ -37,4 +43,6 @@ updates:
     ignore:
       - dependency-name: "php"
         update-types: ["version-update:semver-major", "version-update:semver-minor"]
+      - dependency-name: "node"
+        update-types: ["version-update:semver-major"]          
 
