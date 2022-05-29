@@ -1,5 +1,5 @@
 FROM node:16.15.0-alpine3.15 as node
-FROM php:8.1.6-fpm-alpine
+FROM php:8.1.6-fpm-alpine3.16
 
 COPY --from=node /usr/local/lib/node_modules /usr/local/lib/node_modules
 COPY --from=node /usr/local/bin/node /usr/local/bin/node
@@ -24,8 +24,8 @@ RUN apk --update --no-cache add wget \
   libjpeg-turbo-dev \
   libpng-dev \
   freetype-dev \
-  python2 \
-  python2-dev \
+  python3 \
+  python3-dev \
   py-pip \
   mysql-client \
   libzip-dev \
