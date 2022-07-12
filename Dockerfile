@@ -1,4 +1,4 @@
-FROM node:16.15.1-alpine3.15 as node
+FROM node:16.16.0-alpine3.15 as node
 FROM php:7.4.29-fpm-alpine
 
 COPY --from=node /usr/local/lib/node_modules /usr/local/lib/node_modules
