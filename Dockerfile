@@ -24,8 +24,8 @@ RUN apk --update --no-cache add wget \
   libjpeg-turbo-dev \
   libpng-dev \
   freetype-dev \
-  python2 \
-  python2-dev \
+  python3 \
+  python3-dev \
   py-pip \
   mysql-client \
   libzip-dev \
