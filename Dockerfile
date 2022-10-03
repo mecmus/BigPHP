@@ -1,5 +1,5 @@
 FROM node:16.15.1-alpine3.15 as node
-FROM php:8.0.20-fpm-alpine3.16
+FROM php:8.0.24-fpm-alpine3.16
 
 COPY --from=node /usr/local/lib/node_modules /usr/local/lib/node_modules
 COPY --from=node /usr/local/bin/node /usr/local/bin/node
