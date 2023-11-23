@@ -1,4 +1,4 @@
-FROM node:20.9.0-alpine3.18 as node
+FROM node:20.10.0-alpine3.18 as node
 FROM php:8.1.25-fpm-alpine3.18
 
 
